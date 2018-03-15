@@ -1,0 +1,261 @@
+$desktop: "(min-width: 768px)";
+$biggerScreens: "(min-width: 1201px)";
+
+.container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #474747;
+
+  &:before{
+    position: fixed;
+    left: -92px;
+    width: 60vh;
+    text-align: center;
+    content: 'ALTCOINS';
+    color: #fff;
+    background-color: #FFBE33;
+    transform: rotate(-90deg);
+    font-size: 14px;
+    z-index: 1;
+    @media #{$desktop}{
+      width: 39vh;
+      left: -57px;
+    }
+  }
+
+
+  .main {
+    width: 100%;
+    position: relative;
+
+
+    .main-contain {
+      margin-left: 30px;
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: -5px;
+      }
+
+      .main-contain-elements {
+        height: 18px;
+      }
+
+        .main-contain-elements-span-second, .main-contain-elements-span-third {
+
+          font-size: 10px;
+          text-align: center;
+
+        }
+        .main-contain-elements-span-third {
+          display: none;
+
+          @media #{$desktop} {
+            display: inline-block;
+          }
+        }
+
+        .fa-umbrella {
+          color: #000;
+          font-size: 8px;
+        }
+
+        .fa-circle {
+          color: #FFBE33;
+          font-size: 7px;
+          display: none;
+          @media #{$desktop}{
+            display: inline-block;
+        }
+        }
+
+        .fa-eye {
+          color: #d3d3d3;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          @media #{$desktop}{
+            display: none;
+          }
+        }
+    }
+
+    button {
+      width: 100%;
+      @media #{$desktop}{
+        display: none;
+        }
+      }
+
+    &:after{
+      content: "";
+      display: block;
+      background-color: #d3d3d3;
+      position: relative;
+      width: 90vw;
+      height: 1px;
+      left: 2%;
+      margin-top: 5px;
+
+      @media #{$desktop}{
+        display: none;
+      }
+    }
+
+    @media #{$desktop}{
+      width: 25%;
+    }
+  }
+
+
+  .cell {
+    position: relative;
+    width: 30%;
+
+    @media #{$desktop}{
+      width: calc(51% / 6);
+    }
+
+    &.first-cell {
+
+      &:before{
+        content: "";
+        display: none;
+        background-color: #d3d3d3;
+        position: absolute;
+
+        @media #{$desktop}{
+          display: block;
+          width: 1px;
+          height: 75px;
+        }
+      }
+
+      @media #{$desktop}{
+      width: 12%;}
+    }
+
+    .value {
+      font-size: 20px;
+      text-align: center;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .time {
+      color: #474747;
+      font-size: 10px;
+      //margin: 15px;
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    .money {
+      color: #D83550;
+      span{
+        margin: 0;
+      }
+    }
+
+    &.middle-cell{
+      &:before{
+        content: "";
+        display: block;
+        background-color: #d3d3d3;
+        position: absolute;
+        width: 1px;
+        height: 75px;
+      }
+    }
+
+    &.one-before-last-cell{
+
+      &:after{
+        content: "";
+        display: block;
+        background-color: #d3d3d3;
+        position: absolute;
+        width: 1px;
+        height: 75px;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    &.last-cell {
+      display: none;
+      @media #{$desktop}{
+        margin-top: 12px;
+        width: 12%;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+
+    &.desktop-show-cell {
+      display: none;
+      @media #{$desktop}{
+        display: inline-block;
+      }
+    }
+
+    .last-cell-icons {
+      padding: 10px;
+
+      .fa-balance-scale {
+        color: #d3d3d3;
+        display: none;
+        @media #{$desktop}{
+          display: inline-block;
+          &:hover {
+            color: #00b3ff;
+          }
+        }
+      }
+
+      .fa-eye {
+        color: #d3d3d3;
+        display: none;
+        @media #{$desktop}{
+          display: inline-block;
+          margin-left: 20px;
+          margin-right: 15px;
+          &:hover {
+            color: #58a93e;
+          }
+        }
+      }
+    }
+
+    button {
+      display: none;
+
+      @media #{$desktop}{
+        display: inline-block;
+        margin-left: 35px;
+      }
+    }
+
+  }
+
+  button {
+    height: 34px;
+    border-radius: 4px;
+    color: #fff;
+    background: linear-gradient(90deg, #D22D4F 0%, #F86358 100%);
+    box-shadow: 0 2px 4px 0 rgba(250, 91, 30, 0.34);
+    display: block;
+    text-transform: uppercase;
+  }
+
+  @media #{$biggerScreens} {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
+
